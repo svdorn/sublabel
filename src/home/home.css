@@ -573,6 +573,9 @@
       --try-it-box-width: 340px;
       --try-it-box-height: 312px;
   }
+  .section-intro h1 {
+    font-size: 24px;
+  }
 }
 
 @media screen and (max-width: 450px) {
