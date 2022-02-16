@@ -542,10 +542,11 @@
       --try-it-box-width: 440px;
   }
   .section-intro {
-    margin-bottom: 160px;
+    margin-bottom: 130px;
   }
   .section-intro h1 {
     font-size: 30px;
+    margin-top: 130px;
   }
 }
 
@@ -577,7 +578,7 @@
       --try-it-box-height: 312px;
   }
   .section-intro h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
