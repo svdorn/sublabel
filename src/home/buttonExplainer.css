@@ -1,0 +1,10 @@
+.explainer {
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.explainer > img {
+    height: 8px;
+    padding-left: 5px;
+    margin-top: -8px;
+}

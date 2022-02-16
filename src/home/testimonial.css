@@ -1,0 +1,65 @@
+.testimonial {
+    --profile-pic-width: 60px;
+    --profile-left-space: 19px;
+
+    display: inline-block;
+    text-align: left;
+}
+.speech-bubble {
+    --padding: 20px;
+
+    background-color: var(--primary-white);
+    box-shadow: var(--standard-shadow);
+    border-radius: 8px;
+    padding: var(--padding);
+    height: 230px;
+    width: 398px;
+    color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    margin-bottom: 20px;
+}
+.speech-triangle {
+    --height: 10px;
+    position: absolute;
+    bottom: calc(0px - var(--height));
+    left: calc(var(--profile-left-space) + 0.5 * var(--profile-pic-width) - var(--height));
+    height: var(--height);
+    border-top: var(--height) solid var(--primary-white);
+    border-left: var(--height) solid transparent;
+    border-right: var(--height) solid transparent;
+}
+.logo {
+    height: 30px;
+}
+.quote {
+    position: absolute;
+    top: 70px;
+    width: calc(100% - 2 * var(--padding));
+    line-height: 1.9;
+}
+.profile {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profile-picture {
+    width: var(--profile-pic-width);
+    border-radius: calc(var(--profile-pic-width) * 0.5);
+    margin: 0 10px 0 var(--profile-left-space);
+}
+.name-and-title {
+    display: inline-block;
+}
+
+@media screen and (max-width: 450px) {
+    .speech-bubble {
+        height: 258px;
+        width: 312px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .speech-bubble {
+        width: 288px;
+    }
+}

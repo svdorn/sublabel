@@ -1,0 +1,111 @@
+.menu {
+    position: fixed;
+    height: var(--non-admin-menu-height);
+    top: 0;
+    width: 100%;
+    color: rgb(32, 32, 32);
+    -webkit-box-shadow: 0px 8px 7px -5px var(--shadow-black);
+    -moz-box-shadow: 0px 8px 7px -5px var(--shadow-black);
+    box-shadow: 0px 8px 7px -5px var(--shadow-black);
+    -webkit-transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    -ms-transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    background-color: var(--primary-black-dark);
+    font-size: 12px;
+}
+.menu.both-menus {
+    width: calc(100% - var(--admin-menu-width));
+    left: var(--admin-menu-width);
+    top: var(--top-menu-activator-height);
+}
+.menu.light-shadow {
+    -webkit-box-shadow: 0px 3px 2px -1px #00000030;
+    -moz-box-shadow: 0px 3px 2px -1px #00000030;
+    box-shadow: 0px 3px 2px -1px #00000030;
+}
+.menu.white-menu {
+    background-color: var(--primary-white);
+}
+.menu.green-gradient {
+    background: linear-gradient(to right, var(--palette-3-light), var(--palette-3-dark));
+}
+.menu.blue-purple-gradient {
+    background: linear-gradient(to bottom right, #3fc2ff, #96aafe);
+}
+.menu.noShadow {
+    box-shadow: none;
+}
+/* .menu.noShadow.transparent-if-no-shadow {
+    background-color: initial;
+} */
+.menu + div.headerSpace {
+    width: 100%;
+    height: 72px;
+}
+.menu.notFixed {
+    position: relative;
+}
+.menu.notFixed + div.headerSpace {
+    height: 18px;
+}
+
+.semi-transparent {
+    opacity: 0.7;
+}
+
+.powered-by {
+    display: inline-block;
+    vertical-align: bottom;
+    padding-bottom: 5px;
+    padding-left: 3px;
+    opacity: 0.6;
+}
+
+.small-screen-menu {
+    right: 40px;
+    position: absolute;
+}
+
+.center-menu {
+}
+
+.side-menu-item {
+    width: 218px;
+}
+
+.login-right {
+    margin-left: 140px;
+}
+
+@media screen and (min-width: 701px) {
+    .popover-menu,
+    .small-screen-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menu:not(.both-menus) {
+        position: relative;
+    }
+    .menu:not(.both-menus) + div.headerSpace {
+        width: 100%;
+        height: 0px;
+    }
+
+    .small-screen-menu {
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .small-screen-menu {
+        right: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .powered-by {
+        display: none;
+    }
+}

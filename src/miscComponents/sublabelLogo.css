@@ -1,0 +1,38 @@
+.logo {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+  font-size: 3em;
+  width: 5em;
+  line-height: 0.9em;
+}
+
+.logo-gradient-text {
+  background: conic-gradient(
+    var(--palette-1-dark) 16.666%, 
+    var(--palette-1-light) 16.666%, 
+    var(--palette-2-dark) 33.333%, 
+    var(--palette-3-dark) 33.333%, 
+    var(--palette-3-light) 50%, 
+    var(--palette-4-dark) 50%, 
+    var(--palette-4-light) 66.666%, 
+    var(--palette-5-dark) 66.666%, 
+    var(--palette-5-light) 83.333%, 
+    var(--palette-3-light) 83.333%);
+  
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
+  
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .logo {
+    font-size: 2.5em;
+  }
+}

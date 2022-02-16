@@ -1,0 +1,23 @@
+.wave {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.wave > img {
+    height: 100%;
+}
+.wave-cap-left {
+    background: #32bffd;
+    width: 100vw;
+    height: 40%;
+    margin-right: -4px;
+}
+.wave-cap-right {
+    background: #b228ff;
+    width: 100vw;
+    height: 70%;
+    margin-left: -4px;
+}

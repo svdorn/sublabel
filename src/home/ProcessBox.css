@@ -1,0 +1,181 @@
+.box {
+    --box-width: 360px;
+    --box-height: 316px;
+    --box-color: var(--primary-white);
+
+    box-shadow: var(--standard-shadow);
+    transition: box-shadow calc(var(--scale-time) * 2);
+    display: inline-block;
+    width: var(--box-width);
+    height: var(--box-height);
+    vertical-align: top;
+    margin: 12px;
+    padding: 25px 20px 0 35px;
+    text-align: left;
+    background-color: var(--box-color);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.box > h2.title {
+    font-size: 22px;
+}
+
+.icon {
+    width: 64px;
+    margin-bottom: 16px;
+}
+
+.cta {
+    position: absolute;
+    bottom: 50px;
+}
+.cta-text {
+    margin-right: 20px;
+}
+
+/* ALL THE ANIMATION STUFF */
+/* normal */
+
+.outline-top,
+.outline-c-top {
+    position: absolute;
+    width: 100%;
+    height: var(--outline-width);
+    transform: scaleX(0.2);
+    top: 0;
+}
+.outline-top {
+    transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+.outline-c-top {
+    transition: transform var(--scale-time) calc(var(--scale-time) * 2) ease-out;
+}
+.outline-side-starter {
+    position: absolute;
+    width: var(--outline-width);
+    height: 100%;
+    transform: scaleY(0.2);
+    top: 0;
+    transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+.outline-bottom {
+    width: 100%;
+    height: var(--outline-width);
+    transform: scaleX(0);
+    bottom: 0;
+}
+.outline-side-follower {
+    height: 100%;
+    width: var(--outline-width);
+    transform: scaleY(0);
+    top: 0;
+}
+.outline-bottom,
+.outline-side-follower {
+    position: absolute;
+    transition: transform var(--scale-time) ease-in;
+}
+.outline-c-left {
+    transform-origin: top left;
+    left: 0;
+}
+.outline-c-right {
+    transform-origin: top right;
+    right: 0;
+}
+.outline-c-left,
+.outline-c-right {
+    position: absolute;
+    top: 0;
+    width: var(--outline-width);
+    height: 100%;
+    transform: scaleY(0);
+    transition: transform var(--scale-time) var(--scale-time) linear;
+}
+.outline-c-bottom-left {
+    transform-origin: bottom left;
+    left: 0;
+}
+.outline-c-bottom-right {
+    transform-origin: bottom right;
+    right: 0;
+}
+.outline-c-bottom-left,
+.outline-c-bottom-right {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--outline-width);
+    transform: scaleX(0);
+    transition: transform var(--scale-time) ease-in;
+}
+
+/* end normal */
+/* hover */
+
+.box:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+/* grow across the top all the way immediately */
+.box:hover .outline-top,
+.box:hover .outline-c-top {
+    transform: scaleX(1);
+    transition: transform var(--scale-time) ease-in;
+}
+/* grow across the side all the way immediately */
+.box:hover .outline-side-starter {
+    transform: scaleY(1);
+    transition: transform var(--scale-time) ease-in;
+}
+/* wait, then grow from nothing all the way across the other side*/
+.box:hover .outline-bottom {
+    transform: scaleX(1);
+    transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+/* wait, then grow from nothing all the way across the bottom */
+.box:hover .outline-side-follower {
+    transform: scaleY(1);
+    transition: transform var(--scale-time) var(--scale-time) ease-out;
+}
+/* wait, then grow from nothing all the way across the side */
+.box:hover .outline-c-left,
+.box:hover .outline-c-right {
+    transform: scaleY(1);
+    transition: transform var(--scale-time) var(--scale-time) linear;
+}
+.box:hover .outline-c-bottom-left,
+.box:hover .outline-c-bottom-right {
+    transform: scaleX(0.5);
+    transition: transform var(--scale-time) calc(var(--scale-time) * 2) ease-out;
+}
+
+.star {
+    position: absolute;
+    width: 66px;
+}
+
+/* end hover */
+/* end animations */
+
+@media screen and (max-width: 800px) {
+    .box {
+        margin: 20px 25px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .box {
+        --box-width: 280px;
+        margin: 20px 5px;
+    }
+    .box > h2.title {
+        font-size: 20px;
+    }
+    .cta {
+        position: unset;
+        bottom: unset;
+    }
+}

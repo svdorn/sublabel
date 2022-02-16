@@ -1,0 +1,20 @@
+.science-box {
+    box-shadow: var(--standard-shadow);
+    cursor: pointer;
+    padding: 25px;
+    margin-bottom: 18px;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    text-align: left;
+
+    transition: box-shadow 0.5s ease;
+}
+.science-box:hover {
+    box-shadow: var(--hover-shadow);
+}
+.text {
+    margin-bottom: 14px;
+}
+.action {
+    margin-right: 20px;
+}

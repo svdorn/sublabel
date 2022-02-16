@@ -1,0 +1,39 @@
+.menu {
+  position: relative;
+  height: var(--non-admin-menu-height);
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0px 8px 7px -5px var(--shadow-white);
+  -moz-box-shadow: 0px 8px 7px -5px var(--shadow-white);
+  box-shadow: 0px 8px 7px -5px var(--shadow-white);
+  -webkit-transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  -ms-transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+  background-color: var(--primary-white);
+  font-size: 12px;
+  padding: 10px 0 0 10px;
+}
+
+.menu > a {
+  display: inline-block;
+}
+
+.social-logo-container {
+  display: inline-block;
+  float: right;
+  padding-right: 15px;
+  padding-top: 5px;
+}
+.social-logo {
+  height: 16px;
+}
+
+.menu-header:hover{
+  text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+  .social-logo-container {
+    display: none;
+  }
+}

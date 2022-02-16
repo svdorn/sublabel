@@ -1,0 +1,33 @@
+.shift-arrow {
+    margin: 0 5px 0px 2px;
+    transform: translate3d(0%, 0, 0);
+    transition: transform 0.5s ease;
+}
+
+div:hover > .shift-arrow:not(.disabled),
+button:hover > .shift-arrow:not(.disabled),
+button:hover > span > .shift-arrow:not(.disabled),
+div:hover > div > .shift-arrow.nested-in-div:not(.disabled),
+div:hover > button > .shift-arrow.nested-in-div:not(.disabled),
+div:hover > button > span > .shift-arrow.nested-in-div:not(.disabled) {
+    transform: translate3d(50%, 0, 0);
+}
+
+.disabled {
+    opacity: 0.25;
+}
+
+.reverse-shift-arrow {
+    margin: 0 2px 0px 5px;
+    transform: translate3d(0%, 0, 0) rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+div:hover > .reverse-shift-arrow:not(.disabled),
+button:hover > .reverse-shift-arrow:not(.disabled),
+button:hover > span > .reverse-shift-arrow:not(.disabled),
+div:hover > div > .reverse-shift-arrow.nested-in-div:not(.disabled),
+div:hover > button > .reverse-shift-arrow.nested-in-div:not(.disabled),
+div:hover > button > span > .reverse-shift-arrow.nested-in-div:not(.disabled) {
+    transform: translate3d(-50%, 0, 0) rotate(180deg);
+}
