@@ -541,6 +541,9 @@
   .section-try-it {
       --try-it-box-width: 440px;
   }
+  .section-intro {
+    margin-bottom: 160px;
+  }
   .section-intro h1 {
     font-size: 30px;
   }
@@ -574,7 +577,7 @@
       --try-it-box-height: 312px;
   }
   .section-intro h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 }
 
