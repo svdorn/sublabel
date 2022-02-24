@@ -166,7 +166,7 @@ const IntroSection = ({ png }) => {
 
 const ProcessSection = ({ png }) => {
     return (
-        <section className="section-process" className="center">
+        <section className="section-process">
             <h1>How it works</h1>
             <ProcessBox variant="sell" onClick={goToCultureQuiz} png={png} />
             <ProcessBox variant="curate" onClick={goToTryAssessment} png={png} />
